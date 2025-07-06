@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPY LINK</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        text-align: left;
+        padding: 10px;
+        width: 320px;
+        font-size: 14px;
+        background-color: #f9f9f9;
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      header {
+        background-color: #6366f1;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px 8px 0 0;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      header:hover {
+        background-color: #056939;
+        transform: scale(1.05);
+      }
+     
+      table tbody tr {
+        transition: transform 0.2s ease-in-out;
+      }
+      table tbody tr:hover {
+        background-color: #eaf3ff;
+        transform: scale(1.02);
+      }
+      #buy-coffee-container img {
+        transform: scale(0.9);
+        transition: transform 0.3s;
+      }
+      #buy-coffee-container img:hover {
+        transform: scale(1);
+      }
+      #forceRefresh {
+        transition: transform 0.2s ease-in-out;
+      }
+      #forceRefresh:hover {
+        transform: scale(1.5);
+      }
+      #forceRefresh:active {
+        animation: pulse 0.3s;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- <img src="icons/265.png" alt="Backlink Icon"> -->
+      SPY LINK
+    </header>
+    <div id="popup-container" style="font-family: Arial, sans-serif; max-width: 320px; padding: 20px; background: #ffffff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); animation: fadeIn 1s;">
+      <h3 style="font-size: 18px; line-height:32px; font-weight: bold; margin-bottom: 15px;">
+      </h3>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tbody>
+  <tr>
+    <td style="font-weight: bold; padding: 8px; border-bottom: 1px solid #ddd;">Domain Authority</td>
+    <td id="da" class="loading" style="text-align: right; color: #555; padding: 8px; border-bottom: 1px solid #ddd;">Loading...</td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold; padding: 8px; border-bottom: 1px solid #ddd;">Page Authority</td>
+    <td id="pa" class="loading" style="text-align: right; color: #555; padding: 8px; border-bottom: 1px solid #ddd;">Loading...</td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold; padding: 8px; border-bottom: 1px solid #ddd;">MozTrust</td>
+    <td id="mozTrust" class="loading" style="text-align: right; color: #555; padding: 8px; border-bottom: 1px solid #ddd;">Loading...</td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold; padding: 8px; border-bottom: 1px solid #ddd;">Spam Score</td>
+    <td id="spamScore" class="loading" style="text-align: right; color: #555; padding: 8px; border-bottom: 1px solid #ddd;">Loading...</td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold; padding: 8px; border-bottom: 1px solid #ddd;">Domain Age</td>
+    <td id="domainAge" class="loading" style="text-align: right; color: #555; padding: 8px; border-bottom: 1px solid #ddd;">Loading...</td>
+  </tr>
+</tbody>
+
+      </table>
+      <p id="refreshStatus" style="color: green; text-align: center; margin-top: 10px; display: none; font-size: 12px;">Data refreshed!</p>
+      <p id="cacheDate" style="color: #aaa; font-size: 12px; text-align: center; margin-top: 15px; float:left">Metrics updated on Loading...</p>
+      <button id="forceRefresh" title="Refresh metrics. Metrics are updated automatically every 3 days." style="padding:0; margin:6px 5px 0 0; background-color: #fff; color: green; cursor: pointer; font-size: 24px; font-weight: bold; transition: background 0.3s; float:right; border:none;">
+        &orarr;
+      </button>
+      <div style="clear:both"></div>
+    </div>
+    <style>
+      .hover-name {
+        position: relative;
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    
+      .hover-name::after {
+        content: attr(data-hover);
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: red;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    
+      .hover-name:hover {
+        color: transparent;
+      }
+    
+      .hover-name:hover::after {
+        opacity: 1;
+      }
+    </style>
+    
+    <footer>
+      Made with love by 
+      <a href="https://www.linkedin.com/in/surendrane?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+         target="_blank"
+         class="hover-name"
+         data-hover=" View Profile">
+        SURENDRAN
+      </a>
+      <svg id="heart" width="16" height="14" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 
+                 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+                 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    </footer>
+    
+
+
+    
+    <style>
+      @keyframes heartbeat {
+        0% { transform: scale(1); }
+        25% { transform: scale(1.2); }
+        50% { transform: scale(1); }
+        75% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+      }
+    
+      #heart {
+        animation: heartbeat 1s infinite ease-in-out;
+      }
+    </style>    
+    
+    <script>
+      document.getElementById("forceRefresh").addEventListener("click", function () {
+        this.style.animation = "pulse 0.s";
+        setTimeout(() => {
+          this.style.animation = "";
+        }, 300);
+      });
+      document.querySelectorAll(".loading").forEach((el) => {
+        setTimeout(() => {
+          el.classList.remove("loading");
+          el.innerText = "Data Loaded"; 
+        }, 3000);
+      });
+     
+
+    
+    </script>
+ <script src="popup.js" defer></script>
+  </body>
+</html>

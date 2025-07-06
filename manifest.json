@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "SPY LINK - Surendran | SEO Metrics Checker",
+  "version": "2.0",
+  "description": "SPY LINK is a fast and lightweight SEO tool that gives instant access to key domain metrics like DA, PA, Backlinks, Spam Score, and Domain Age — all in one click.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyZTVS5Li4AMpWkTkClb/0P0tgPjRCOyOr5CVza1BJjzv+9hsOVkTJwG0eEgX3KyEOr13CcNsrFQcX0zsZQJJx9ex+XZVaQo+B4HLOS0H+CnYUYf5u+I2dC6blOpeAs8+WKb5juW4FQHZZwddCD0uZMjLNUDhRQaxQaY8Kx5Ey4rlR4NZq7VwZ1PRzGk0MzqHZg99E4PuUzd85a4qw/CePVct/8L25lZg9a5eGa3EyomSBFiorAVddVPdYoFOCXoavhlRDN7dKMQDfUHVzS1ty1yDNhxBWTV3Ez1gN25uSoRq0vv5axIXsT7R5HiVqANPC8PMZVvF9NHpnZfi+C2IiQIDAQAB",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": [
+    "https://jsonwhoisapi.com/*",
+    "https://api.whois.vu/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
